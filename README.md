@@ -20,7 +20,6 @@ This project establishes a reproducible bioinformatics pipeline to identify and 
 
 ### 1. Data Acquisition
 Raw RNA-seq data was downloaded using the SRA toolkit and converted to FASTQ format.
-* **Command:** `fastq-dump --gzip --split-3 SRR30677899`
 
 ### 2. Quality Control (QC)
 Reads were processed to remove adapters and low-quality bases (< Q20).
