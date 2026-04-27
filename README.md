@@ -1,26 +1,26 @@
 # In Silico Identification of Neoantigens for Personalised Immunotherapy in Glioblastoma
 
 ## 📌 Project Overview
-[cite_start]This project establishes a reproducible bioinformatics pipeline to identify and rank novel neoantigens from Glioblastoma RNA-seq datasets[cite: 1, 24]. [cite_start]The objective is to design personalized vaccines by detecting mutated peptides that bind strongly to patient-specific HLA alleles[cite: 1, 5].
+This project establishes a reproducible bioinformatics pipeline to identify and rank novel neoantigens from Glioblastoma RNA-seq datasets. The objective is to design personalized vaccines by detecting mutated peptides that bind strongly to patient-specific HLA alleles.
 
 **Target:** Glioblastoma (GBM)
-[cite_start]**Reference Genome:** GRCh38 (Chromosome 19 Pilot) [cite: 1]
-[cite_start]**Sample ID:** SRR30677899 [cite: 1]
+* **Reference Genome:** GRCh38 (Chromosome 1 Pilot) - ENSEMBL.
+* **Sample ID:** SRR30677899 - NCBI SRA
 
 ## 🛠️ Tech Stack & Tools
-* [cite_start]**Environment:** Ubuntu Linux (Conda `gbm` environment) [cite: 1]
-* [cite_start]**Data Acquisition:** NCBI SRA Toolkit [cite: 6]
-* [cite_start]**Quality Control:** FastQC, Trim Galore [cite: 8, 9]
-* [cite_start]**Alignment:** STAR Aligner [cite: 11]
-* [cite_start]**Variant Calling:** GATK HaplotypeCaller, Picard, VEP [cite: 14, 15, 17]
-* [cite_start]**HLA Typing:** OptiType [cite: 18]
-* [cite_start]**Prediction:** MHCflurry [cite: 19]
+* **Environment:** Ubuntu Linux (Conda `gbm` environment)
+* **Data Acquisition:** NCBI SRA Toolkit
+* **Quality Control:** FastQC, Trim Galore
+* **Alignment:** STAR Aligner
+* **Variant Calling:** GATK HaplotypeCaller, Picard, VEP
+* **HLA Typing:** OptiType 
+* **Prediction:** MHCflurry
 
 ## 🧬 Pipeline Workflow
 
 ### 1. Data Acquisition
 Raw RNA-seq data was downloaded using the SRA toolkit and converted to FASTQ format.
-* [cite_start]**Command:** `fastq-dump --gzip --split-3 SRR30677899` [cite: 7]
+* **Command:** `fastq-dump --gzip --split-3 SRR30677899`
 
 ### 2. Quality Control (QC)
 Reads were processed to remove adapters and low-quality bases (< Q20).
