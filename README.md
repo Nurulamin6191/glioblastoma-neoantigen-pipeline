@@ -32,26 +32,26 @@ Trimmed sequences were mapped to the GRCh38 reference genome using STAR.
 
 ### 4. Variant Calling
 Mutations were identified to find somatic variants.
-* [cite_start]**Process:** Read group tagging (Picard) -> Variant Calling (GATK) -> Annotation (VEP)[cite: 15, 16, 17].
+* **Process:** Read group tagging (Picard) -> Variant Calling (GATK) -> Annotation (VEP).
 
 ### 5. HLA Typing
-[cite_start]Patient HLA alleles were identified using OptiType[cite: 18].
+Patient HLA alleles were identified using OptiType.
 * **Identified Profile:**
     * HLA-A: A*02:06, A30:01
     * HLA-B: B*08:01, B53:01
-    * [cite_start]HLA-C: C*07:01 [cite: 18]
+    * HLA-C: C*07:01
 
 ### 6. Neoantigen Prediction
-[cite_start]Peptides were tested for binding affinity against the patient's HLA-A*02:06 allele using MHCflurry[cite: 20].
+Peptides were tested for binding affinity against the patient's HLA-A*02:06 allele using MHCflurry.
 
 ## 📊 Results
 
-[cite_start]The pipeline successfully filtered candidates based on a binding affinity strength of < 500nM[cite: 20].
+The pipeline successfully filtered candidates based on a binding affinity strength of < 500nM.
 
 | Candidate Type | Peptide Sequence | Affinity (nM) | Prediction |
 | :--- | :--- | :--- | :--- |
-| **Top Candidate** | **LLFGYPVYV** | **10.31 nM** | [cite_start]**Strong Binder (High Priority)** [cite: 21] |
-| Negative Control | SYFPEITHI | 746.85 nM | [cite_start]Non-Binder (Rejected) [cite: 22] |
+| **Top Candidate** | **LLFGYPVYV** | **10.31 nM** | **Strong Binder (High Priority)** |
+| Negative Control | SYFPEITHI | 746.85 nM | Non-Binder (Rejected) |
 
 ## 📝 Conclusion
-[cite_start]This workflow successfully integrates SRA data acquisition, alignment, variant calling, and HLA profiling to identify vaccine targets[cite: 24]. [cite_start]The top candidate, **LLFGYPVYV**, binds tightly to the patient's HLA-A*02:06 receptor and is a suitable candidate for vaccine design[cite: 21].
+This workflow successfully integrates SRA data acquisition, alignment, variant calling, and HLA profiling to identify vaccine targets. The top candidate, **LLFGYPVYV**, binds tightly to the patient's HLA-A*02:06 receptor and is a suitable candidate for vaccine design.
