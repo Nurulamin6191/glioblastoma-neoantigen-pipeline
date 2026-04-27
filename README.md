@@ -4,7 +4,7 @@
 This project establishes a reproducible bioinformatics pipeline to identify and rank novel neoantigens from Glioblastoma RNA-seq datasets. The objective is to design personalized vaccines by detecting mutated peptides that bind strongly to patient-specific HLA alleles.
 
 **Target:** Glioblastoma (GBM)
-* **Reference Genome:** GRCh38 (Chromosome 1 Pilot) - ENSEMBL.
+* **Reference Genome:** GRCh38 (Chromosome 01 Pilot) - ENSEMBL.
 * **Sample ID:** SRR30677899 - NCBI SRA
 
 ## 🛠️ Tech Stack & Tools
@@ -24,11 +24,11 @@ Raw RNA-seq data was downloaded using the SRA toolkit and converted to FASTQ for
 
 ### 2. Quality Control (QC)
 Reads were processed to remove adapters and low-quality bases (< Q20).
-* [cite_start]**Result:** Read 1 length decreased (aggressive cleaning), while Read 2 maintained high quality (88bp)[cite: 10].
+* **Result:** Read 1 length decreased (aggressive cleaning), while Read 2 maintained high quality.
 
 ### 3. Genome Alignment
 Trimmed sequences were mapped to the GRCh38 reference genome using STAR.
-* [cite_start]**Metric:** ~13% uniquely mapped reads (Excellent for the Chromosome 19 pilot run)[cite: 13].
+* **Metric:** ~13% uniquely mapped reads (Excellent for the Chromosome 01 pilot run).
 
 ### 4. Variant Calling
 Mutations were identified to find somatic variants.
