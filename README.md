@@ -5,7 +5,7 @@ This project establishes a reproducible bioinformatics pipeline to identify and 
 
 **Target:** Glioblastoma (GBM)
 * **Reference Genome:** GRCh38 (Chromosome 01 Pilot) - ENSEMBL.
-* **Sample ID:** SRR30677899 - NCBI SRA
+* **Sample ID:** SRR30677899 & SRR30677902 - NCBI SRA
 
 ## 🛠️ Tech Stack & Tools
 * **Environment:** Ubuntu Linux (Conda `gbm` environment)
